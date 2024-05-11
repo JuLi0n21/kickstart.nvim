@@ -850,6 +850,8 @@ require('lazy').setup({
 
       -- You can configure highlights by doing something like:
       vim.cmd.hi 'Comment gui=none'
+      vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+      vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
     end,
   },
 
@@ -974,7 +976,7 @@ require('lazy').setup({
         harpoon:list():next()
       end)
 
-      vim.keymap.set('n', 'T', function()
+      vim.keymap.set('n', 'C-e', function()
         toggle_telescope(harpoon:list())
       end, { desc = 'Open harpoon window' })
     end,
