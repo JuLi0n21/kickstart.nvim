@@ -976,7 +976,7 @@ require('lazy').setup({
         harpoon:list():next()
       end)
 
-      vim.keymap.set('n', 'C-e', function()
+      vim.keymap.set('n', 'T', function()
         toggle_telescope(harpoon:list())
       end, { desc = 'Open harpoon window' })
     end,
@@ -995,7 +995,7 @@ require('lazy').setup({
   -- require 'kickstart.plugins.indent_line',
   -- require 'kickstart.plugins.lint',
   -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.neo-tree',
   -- require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
 
   -- note: the import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
